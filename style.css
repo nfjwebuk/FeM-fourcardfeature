@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --veryDarkBlue: hsl(234, 12%, 34%);
+  --grayBlue: hsl(229, 6%, 66%);
+  --vLigtGray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--veryDarkBlue);
+  background: var(--vLigtGray);
+}
+
+.container {
+  padding: 8.5rem 3.2rem 7.8rem 3.2rem;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.17px;
+  font-weight: 200;
+  margin-bottom: 1.6rem;
+}
+
+header span {
+  display: block;
+  font-weight: 600;
+}
+
+header p {
+  font-size: 1.5rem;
+  color: var(--grayBlue);
+  letter-spacing: 0.1px;
+  line-height: 2.5rem;
+  max-width: calc(1440px / 2.7);
+  margin: 0 auto;
+  margin-bottom: 7.6rem;
+}
+
+.card_group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 31.1rem;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  padding: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0.8rem;
+}
+
+.card::before {
+  position: absolute;
+  content: '';
+  height: 0.35rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: red;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.card-1::before {
+  background: var(--cyan);
+}
+
+.card-2::before {
+  background: var(--red);
+}
+
+.card-3::before {
+  background: var(--orange);
+}
+
+.card-4::before {
+  background: var(--blue);
+}
+
+.card h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1.3rem;
+  letter-spacing: 0.1px;
+  color: var(--grayBlue);
+  margin-bottom: 3.3rem;
+}
+
+.card img {
+  width: 5.7rem;
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 1024px) {
+  header h1 {
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+    letter-spacing: 0.25px;
+  }
+
+  header p {
+    margin-bottom: 6.4rem;
+  }
+  .card {
+    width: 350px;
+    padding: 3.2rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.6rem;
+  }
+
+  .card p {
+    margin-bottom: 4rem;
+    line-height: 23px;
+  }
+  .card img {
+    width: 6.4rem;
+  }
+}
+
+/* Remember to ask would it be required that I would have to fix this difference between such small pixels */
+
+@media screen and (min-width: 1201px) {
+  .card-1 {
+    transform: translateY(50%);
+  }
+
+  .card-3 {
+    order: 4;
+  }
+
+  .card-4 {
+    transform: translateY(50%);
+  }
+}
